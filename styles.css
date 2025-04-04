@@ -1,0 +1,154 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f1dfca;
+  color: #222831;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Ensures vertical alignment */
+  text-align: center;
+  background-color: antiquewhite;
+  width: 50%; /* Keeps the width consistent */
+  color: black;
+  height: 5vh; /* Ensures it takes the full viewport height */
+  margin: auto; /* Centers the element horizontally */
+}
+
+h3 {
+  text-align: center;
+  color: #333;
+}
+
+p {
+  color: #555;
+}
+
+/* Product Section */
+.products-section {
+  margin-top: 40px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding-top: 15px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 10px;
+  background-color: white;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.card p {
+  margin: 10px 0;
+  font-size: 0.9rem;
+}
+
+.card .btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Brand Focus Section */
+.brand-section {
+  gap: 100vh;
+  margin-top: 60px;
+}
+
+.brand-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+
+.brand-image {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 80%;
+}
+.brand-image img {
+  max-width: 100%;
+  border-radius: 20px;
+  height: 100%;
+}
+
+.brand-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.brand-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.brand-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .brand-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-text h3 {
+    font-size: 1.2rem;
+  }
+
+  .brand-text p {
+    font-size: 0.9rem;
+  }
+}
